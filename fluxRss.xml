@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <title>RER C : Retard</title>
+      <description>Retard de 12 minutes</description>
+      <retard> 15 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>Ligne 4 : Retard</title>
+      <description>Retard de 15 minutes</description>
+      <retard> 20 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>Ligne 3 : Retard</title>
+      <description>Retard de 8 minutes</description>
+      <retard> 8 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>Ligne 1 : Retard</title>
+      <description>Retard de 5 minutes</description>
+      <retard> 10 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>RER A : Retard</title>
+      <description>Retard de 18 minutes</description>
+      <retard> 10 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>RER B : Retard</title>
+      <description>Retard de 11 minutes</description>
+      <retard> 120 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>BUS 26 : Retard</title>
+      <description>Retard de 9 minutes</description>
+    <retard> 70 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>RER 46 : Retard</title>
+      <description>Retard de 13 minutes</description>
+    <retard> 80 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>BUS 227 : Retard</title>
+      <description>Retard de 2 minutes</description>
+      <retard> 15 </retard>
+      <pubDate>Fri, 05 Jul 2019 06:23:39 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
