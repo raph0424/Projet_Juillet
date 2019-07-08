@@ -1,0 +1,284 @@
+<?php
+session_start();
+if(isset($_SESSION['mdp']))
+    {
+      $connec ='Deconnexion';
+      $linkCon ='vue/deconnexion.php';
+      $sign = '';
+      $signe = '';
+      $event = 'vue/evenement.php';
+    }
+    else
+    {
+      $linkCon ='vue/connexion.php';
+      $connec ='Connexion';
+      $sign = 'vue/inscription.php';
+      $signe = 'Inscription';
+      $event = 'vue/connexion.php';
+    }
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Orange Event</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="#intro" class="scrollto"><img src="img/cfa.png" alt="" title=""></a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.php">Accueil</a></li>
+          <li><a href="vue/boutique.php">Boutique</a></li>
+          <li><a href="<?php echo $event; ?>">Classe</a></li>
+          <li><a href="<?php echo $linkCon; ?>"><?php echo $connec; ?></a></li>
+          <li><a href="<?php echo $sign; ?>"><?php echo $signe; ?></a></li>
+          <?php 
+          if(isset($_SESSION['nom']))
+          {
+              ?><li class="buy-tickets"><a href="vue/configuration.php">Configuration</a></li><?php
+          }
+          ?>
+        </ul>
+      </nav>
+    </div>
+    </header>
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0"><span>CFA INSTA</span></h1>
+    </div>
+  </section>
+  <main id="main">
+
+    <section id="venue" class="wow fadeInUp">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h2>Cfa Insta</h2>
+          <p>Location du siege social</p>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 venue-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12484.097973906048!2d2.3422515710231884!3d48.86853905302017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc403d0594e8dc5f!2sCFA+INSTA!5e0!3m2!1sfr!2sfr!4v1562579769501!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3>Siege social, Paris</h3>
+                <p>Créé en 2009 par Ryad Lebib et Hubert Trapet, le CFA INSTA accueille et forme près de 500 étudiant(e)s par an pour leur assurer un avenir professionnel.
+                  Notre réactivité et notre écoute du marché s'est traduite par la mise en place de formations adaptées et diplômantes reconnues par l’État (titres RNCP et diplômes d'État), en informatique (développement, logiciel et réseaux), en ressources humaines et en comptabilité.
+                  Depuis près de 10 ans, le CFA INSTA propose plusieurs formations en alternance (contrat d’apprentissage ou de professionnalisation) en comptabilité et RH et en initiale et en alternance en informatique. Nos formations vont de bac+ 2 à bac+5.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <section id="supporters" class="section-with-bg wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Sponsors</h2>
+        </div>
+        <div class="row no-gutters supporters-wrap clearfix">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/supporters/1.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/supporters/2.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/supporters/3.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/supporters/4.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/supporters/5.png" class="img-fluid" alt="">
+            </div>
+          </div>       
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/supporters/6.png" class="img-fluid" alt="">
+            </div>
+          </div>          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/supporters/7.png" class="img-fluid" alt="">
+            </div>
+          </div>         
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/supporters/8.png" class="img-fluid" alt="">
+            </div>
+              </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>F.A.Q </h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+              <ul id="faq-list">
+                <li>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1">Comment faire pour créer un évenement ? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq1" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Vous devez être partenaire d'orange. Pour devenir partenaire vous devez vous inscrire en tant qu'entreprise et faire une création d'événement.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <a data-toggle="collapse" href="#faq2" class="collapsed">Quand le site à t-il été crée ? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq2" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Le site d'événement d'orange à été crée à la suite d'une forte demande des partenaires pour un système de création d'évenement simplifié.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <a data-toggle="collapse" href="#faq3" class="collapsed">Quels avantages à acheter mes billets? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq3" class="collapse" data-parent="#faq-list">
+                    <p>
+                      En achetant votre billet en ligne vous pourrez bénéficiez de réduction.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <a data-toggle="collapse" href="#faq4" class="collapsed">Combien de produit sont il disponnible ? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq4" class="collapse" data-parent="#faq-list">
+                    <p>
+                     Le nombre de produit varie en fonction des événement en cour, chaque événement détient un produit qu'il met en ligne dans notre boutique.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contacter nous</h2>
+        </div>
+        <div class="row contact-info">
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Addresse</h3>
+              <address>6 Place d'Alleray,  Paris 75015, FRANCE</address>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Numéro de téléphone</h3>
+              <p><a href="tel:+33647389923">06.47.38.99.23</a></p>
+            </div>
+              </div>
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:orange.event2019@gmail.com"> orange.event2019@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="img/cfa.png" alt="TheEvenet">
+            <p>
+            L'informatique concerne le traitement automatique de l'information grâce à l'exécution de programmes par des machines 
+            (systèmes embarqués, ordinateurs, applications, etc.). Notre cursus informatique couvre deux pans de l'informatique :
+               les systèmes d'information (SI) en réseaux et la programmation et le développement.
+
+
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Liens utiles</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Liens utiles</h4>
+            <ul>
+            <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contactez nous</h4>
+            <p>
+            12 Rue de Cléry, 75002 Paris
+              <strong>Téléphone:</strong>01.43.41.72.50<br>
+              <strong>Email:</strong>cfa-insta@gmail.com<br>
+            </p>
+            <div class="social-links">
+              <a href="https://twitter.com/orange?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/Orange.France/" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/orange/" class="instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Cfa-Insta</strong>.All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by<a href="">Cfa insta</a>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
