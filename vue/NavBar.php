@@ -17,7 +17,7 @@ if (isset($_SESSION['mdp'])) {
         {?>
             <li><a href="note.php">Note</a></li><?php
         }?>
-<?php   if(isset($resultat['login']) === "admin")
+<?php   if(isset($_SESSION['login'])  && $_SESSION['login'] != "admin")
         {?>
             <li><a href="<?php echo $event; ?>">Classe</a></li>
         <?php
@@ -27,7 +27,7 @@ if (isset($_SESSION['mdp'])) {
         {?>
             <li class="buy-tickets"><a href="billet.php">Billet de retard</a></li><?php
         }?>
-<?php   if(isset($_SESSION['login']) == "admin")
+<?php   if(isset($_SESSION['login']) && $_SESSION['login'] == "admin")
         {?>
            <li class="buy-tickets"><a href="config.php">Configuration</a></li><?php
         }?>

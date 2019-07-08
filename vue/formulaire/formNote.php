@@ -1,6 +1,32 @@
 <form class="form-group" method="post" action="">
     <table border=0>
     <div class="form-group">
+    <td><select name="id_matiere">
+            <?php
+                    foreach( $lesCateg as $uneCateg)
+                    {
+                        echo "<option value='".$uneCateg['id_matiere']."'>"
+                        .$uneCateg['libelle']."</option>";
+                    }
+            ?>
+            </select>
+            </td>
+        </div>  
+        <div class="form-group">
+    <td><select name="id_etudiant">
+            <?php
+                    foreach( $lesCateg as $uneCateg)
+                    {
+                        echo "<option value='".$uneCateg['id_etudiant']."'>"
+                        .$uneCateg['Nom']."</option>";
+                    }
+            ?>
+            </select>
+            </td>
+        </div>  
+
+
+    <div class="form-group">
             <label for="info" class="col-sm-4 control-label">Note d'informatique</label>
             <div class="col-sm-6">
                 <input type="text" class="form-control" id="info" name="info" placeholder="Note">

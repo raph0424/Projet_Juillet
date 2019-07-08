@@ -4,18 +4,38 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <?php
 require_once("formulaire/formNote.php");
+$lesCateg = $unControleur->selectMatiere();
+$lesCategs = $unControleur->selectEtudiant();
+
 
 if(isset($_POST["Ajouter"]))
 {
-   $envoi = array ("auteur"=>$_SESSION['prenom'],
-   "email"=>$_SESSION['email'],
-   "objet"=>$_POST['objet'], 
-   "date"=>$_POST['date'],
-   "contenu"=>$_POST['contenu'],
-   "id_personne"=>$_SESSION['id_personne'],
-   "id_partenaire"=>$_POST['id_partenaire']
+   $envoi = array (
+   "valeur"=>$_POST['Valeur'],
+   "id_personne"=>$_POST['id_matiere'],
+   "id_etudiant"=>$_POST['id_etudiant']
+);
+   $envoi1 = array (
+    "valeur"=>$_POST['Valeur'],
+    "id_personne"=>$_POST['id_matiere'],
+    "id_etudiant"=>$_POST['id_etudiant']
   );
-   $unControleur->insert("Note",$envoi);
+  $envoi2 = array (
+    "valeur"=>$_POST['Valeur'],
+    "id_personne"=>$_POST['id_matiere'],
+    "id_etudiant"=>$_POST['id_etudiant']
+  );
+  $envoi3 = array (
+    "valeur"=>$_POST['Valeur'],
+    "id_personne"=>$_POST['id_matiere'],
+    "id_etudiant"=>$_POST['id_etudiant']
+  );
+  $envoi4 = array (
+    "valeur"=>$_POST['Valeur'],
+    "id_personne"=>$_POST['id_matiere'],
+    "id_etudiant"=>$_POST['id_etudiant']
+  );
+   $unControleur->insert("note",$envoi,$envoi1,$envoi2,$envoi3,$envoi4);
   
    echo '<div class="modal fade show" style="display : block;" id="ignismyModal" role="dialog">
                 <div class="modal-dialog">

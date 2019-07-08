@@ -124,11 +124,11 @@ public function update($table, array $tab, array $id)
     $statement->execute($valeurs);
 }
 
-public function selectEvent()
+public function selectMatiere()
 {
     if ($this->unPdo != null) {
             // selection de toutes les données
-            $requete = "select * from event ;";
+            $requete = "select * from matiere;";
             // preparation de la requete avant execution
             $select = $this->unPdo->prepare($requete);
 
@@ -158,11 +158,11 @@ public function selectEvent()
         }
     }
     
-     public function selectLieu()
+     public function selectEtudiant()
     {
     if ($this->unPdo != null) {
             // selection de toutes les données
-            $requete = "select * from Lieu;";
+            $requete = "select * from etudiant;";
             // preparation de la requete avant execution
             $select = $this->unPdo->prepare($requete);
 
