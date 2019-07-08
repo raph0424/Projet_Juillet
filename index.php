@@ -4,7 +4,7 @@ if(isset($_SESSION['mdp']))
     {
       $connec ='Deconnexion';
       $linkCon ='vue/deconnexion.php';
-      $event = 'vue/evenement.php';
+      $event = 'vue/classe.php';
     }
     else
     {
@@ -44,7 +44,7 @@ if(isset($_SESSION['mdp']))
     
     <?php  if(isset($_SESSION['nom']))
             {?>
-                <li><a href="info.php">Note</a></li>
+                <li><a href="note.php">Note</a></li>
                 <?php
                 
                 //if(isset($_SESSION['role'] == "etud"))?>

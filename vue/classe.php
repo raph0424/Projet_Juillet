@@ -11,7 +11,7 @@ $unControleur = new leControleur("localhost","event","root","");
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Orange Event</title>
+  <title>Cfa Insta</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -29,7 +29,7 @@ $unControleur = new leControleur("localhost","event","root","");
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="#intro" class="scrollto"><img src="../img/logo.png" alt="" title=""></a>
+        <a href="#intro" class="scrollto"><img src="../img/cfa.png" alt="" title=""></a>
       </div>
 
     <?php
@@ -39,18 +39,31 @@ $unControleur = new leControleur("localhost","event","root","");
     </br>
   </header>
 <div>
+<br><br><br><br><br><br><br><br>
+
+<center>
+<img class="slam" src="../img/logoslam.png" width="300">
+<img class="slam" src="../img/logosisr.png" width="300"> 
+</center>
+<br><br><br><br><br><br><br><br>
+
   <?php 
 
-      require_once("affichage/vueEvent.php");
+      //require_once("affichage/vueEvent.php");
   ?>
-</div>
-<footer id="footer">
-<div class="footer-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 footer-info">
-        <img src="../img/logo.png" alt="TheEvenet">
-        <p>Notre Groupe est l’héritier d’une histoire plurielle, riche de défis relevés, d'innovations audacieuses et d'une solidarité forte entre les femmes et les hommes qui ont partagé cette dynamique. Orange, héritier de France Télécom, porte les valeurs d’un groupe mondial d’origine française, fier de ses racines, mais aussi fier de ses conquêtes à l’échelle du monde. Une épopée à découvrir à travers 30 moments forts et 130 dates clés qui constituent la mémoire de notre entreprise, d’hier à aujourd’hui.</p>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="../img/cfa.png" alt="TheEvenet">
+            <p>
+            L'informatique concerne le traitement automatique de l'information grâce à l'exécution de programmes par des machines 
+            (systèmes embarqués, ordinateurs, applications, etc.). Notre cursus informatique couvre deux pans de l'informatique :
+               les systèmes d'information (SI) en réseaux et la programmation et le développement.
+
+
+            </p>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
           <h4>Liens utiles</h4>
@@ -71,11 +84,9 @@ $unControleur = new leControleur("localhost","event","root","");
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contactez nous</h4>
             <p>
-              6 Place d'Alleray <br>
-              Paris, P 75015<br>
-              FRANCE <br>
-              <strong>Téléphone:</strong>06.47.38.99.23<br>
-              <strong>Email:</strong>orange.event2019@gmail.com<br>
+            12 Rue de Cléry, 75002 Paris
+              <strong>Téléphone:</strong>01.43.41.72.50<br>
+              <strong>Email:</strong>cfa-insta@gmail.com<br>
             </p>
             <div class="social-links">
               <a href="https://twitter.com/orange?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -88,7 +99,7 @@ $unControleur = new leControleur("localhost","event","root","");
     </div>
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Orange</strong>.All Rights Reserved
+        &copy; Copyright <strong>Cfa-Insta</strong>.All Rights Reserved
       </div>
       <div class="credits">
         Designed by<a href="">Cfa insta</a>

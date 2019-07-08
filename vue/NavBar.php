@@ -15,7 +15,7 @@ if (isset($_SESSION['mdp'])) {
         <li class="menu-active"><a href="../index.php">Accueil</a></li>
 <?php   if(isset($_SESSION['nom'])) 
         {?>
-            <li><a href="info.php">Note</a></li><?php
+            <li><a href="note.php">Note</a></li><?php
         }?>
 <?php   if(isset($resultat['login']) === "admin")
         {?>
