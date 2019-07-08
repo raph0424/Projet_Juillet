@@ -3,6 +3,7 @@ session_start();
       require_once("../controleur/leControleur.php");
 $unControleur = new leControleur("localhost","recap","root","");
 $result1 = $unControleur->selectEtudiant();
+$result2 = $unControleur->selectClasse();
   ?>
 <!DOCTYPE html>
 <html lang="fr">
