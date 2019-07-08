@@ -175,6 +175,23 @@ public function selectMatiere()
             
         }
     }
+    public function selectClasse()
+    {
+    if ($this->unPdo != null) {
+            // selection de toutes les données
+            $requete = "select * from classe;";
+            // preparation de la requete avant execution
+            $select = $this->unPdo->prepare($requete);
+
+            // exection de la requete
+            $select->execute();
+
+            // extraction des données
+            $result = $select->fetchAll();
+            return $result;
+            
+        }
+    }
     public function selectInscrire()
     {
     if ($this->unPdo != null) {
