@@ -42,8 +42,8 @@ $unControleur = new leControleur("localhost","event","root","");
 <br><br><br><br><br><br><br><br>
 
 <center>
-<img class="slam" src="../img/logoslam.png" width="300">
-<img class="slam" src="../img/logosisr.png" width="300"> 
+<a href="slam.php"><img class="slam" src="../img/logoslam.png" width="300"></a>&nbsp&nbsp&nbsp&nbsp
+<a href="sisr.php"><img class="sisr" src="../img/logosisr.png" width="300"></a>
 </center>
 <br><br><br><br><br><br><br><br>
 

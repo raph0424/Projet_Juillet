@@ -18,7 +18,6 @@ if(isset($_POST["Seconnecter"]))
         }
         else
         {
-        
             echo" Connexion impossible ! Veuillez vérifier vos identifiants !";
         }
     }            
