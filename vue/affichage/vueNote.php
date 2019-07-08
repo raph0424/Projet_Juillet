@@ -4,6 +4,9 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <?php
 require_once("formulaire/formNote.php");
+$lesCateg = $unControleur->selectMatiere();
+$lesCategs = $unControleur->selectEtudiant();
+
 
 if(isset($_POST["Ajouter"]))
 {
