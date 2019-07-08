@@ -2,9 +2,9 @@
 session_start();
 //sleep(10);
 require_once("../controleur/leControleur.php");
-$unControleur = new leControleur("localhost","event","root","");
-//$result = $unControleur->selectEtudiant();
-//$results = $unControleur->selectClasse();
+$unControleur = new leControleur("localhost","recap","root","");
+$result = $unControleur->selectSisr();
+
 
   ?>
 <!DOCTYPE html>

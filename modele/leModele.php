@@ -175,6 +175,40 @@ public function selectMatiere()
             
         }
     }
+    public function selectSlam()
+    {
+    if ($this->unPdo != null) {
+            // selection de toutes les données
+            $requete = "select * from etudiant where id_classe = 2;";
+            // preparation de la requete avant execution
+            $select = $this->unPdo->prepare($requete);
+
+            // exection de la requete
+            $select->execute();
+
+            // extraction des données
+            $result = $select->fetchAll();
+            return $result;
+            
+        }
+    }
+    public function selectSisr()
+    {
+    if ($this->unPdo != null) {
+            // selection de toutes les données
+            $requete = "select * from etudiant where id_classe = 1;";
+            // preparation de la requete avant execution
+            $select = $this->unPdo->prepare($requete);
+
+            // exection de la requete
+            $select->execute();
+
+            // extraction des données
+            $result = $select->fetchAll();
+            return $result;
+            
+        }
+    }
     public function selectInscrire()
     {
     if ($this->unPdo != null) {

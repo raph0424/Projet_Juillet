@@ -1,8 +1,8 @@
 <?php
-    foreach ($resultat as $unResultat)
+    foreach ($result as $unResultat)
     {
         echo"<table class=' table table-bordered'>";
-    echo" <tr><th width='60%'>Commentaire de ".$unResultat['auteur']."</th><th width='20%'>Note</th>
+    echo" <tr><th width='60%'>Liste des élèves de slam</th></th>
     " ;       if($_SESSION['prenom'] == $unResultat['auteur'] || $_SESSION['nom'] == "admin" && $unResultat['id_telephone'] == $id_produit)
     {
         echo "<th width='10%'>Supprimer commentaire</th>";

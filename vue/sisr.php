@@ -1,10 +1,9 @@
 <?php
 session_start();
-//sleep(10);
 require_once("../controleur/leControleur.php");
 $unControleur = new leControleur("localhost","recap","root","");
-//$result = $unControleur->selectEtudiant();
-//$results = $unControleur->selectClasse();
+$result = $unControleur->selectSisr();
+
 
   ?>
 <!DOCTYPE html>
@@ -42,8 +41,9 @@ $unControleur = new leControleur("localhost","recap","root","");
 <br><br><br><br><br><br><br><br>
 
 <center>
-<a href="slam.php"><img class="slam" src="../img/logoslam.png" width="300"></a>&nbsp&nbsp&nbsp&nbsp
-<a href="sisr.php"><img class="sisr" src="../img/logosisr.png" width="300"></a>
+<?php 
+    require_once("affichage/vueSisr.php");
+?>
 </center>
 <br><br><br><br><br><br><br><br>
 
