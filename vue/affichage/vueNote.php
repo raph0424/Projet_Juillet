@@ -3,39 +3,45 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <?php
-require_once("formulaire/formNote.php");
 $lesCateg = $unControleur->selectMatiere();
 $lesCategs = $unControleur->selectEtudiant();
+//var_dump($lesCategs);
+require_once("formulaire/formNote.php");
+
 
 
 if(isset($_POST["Ajouter"]))
 {
    $envoi = array (
-   "valeur"=>$_POST['Valeur'],
-   "id_personne"=>$_POST['id_matiere'],
+   "valeur"=>$_POST['info'],
+   "id_matiere"=>1,
    "id_etudiant"=>$_POST['id_etudiant']
 );
    $envoi1 = array (
-    "valeur"=>$_POST['Valeur'],
-    "id_personne"=>$_POST['id_matiere'],
+    "valeur"=>$_POST['math'],
+    "id_matiere"=>4,
     "id_etudiant"=>$_POST['id_etudiant']
   );
   $envoi2 = array (
-    "valeur"=>$_POST['Valeur'],
-    "id_personne"=>$_POST['id_matiere'],
+    "valeur"=>$_POST['fr'],
+    "id_matiere"=>3,
     "id_etudiant"=>$_POST['id_etudiant']
   );
   $envoi3 = array (
-    "valeur"=>$_POST['Valeur'],
-    "id_personne"=>$_POST['id_matiere'],
+    "valeur"=>$_POST['eng'],
+    "id_matiere"=>5,
     "id_etudiant"=>$_POST['id_etudiant']
   );
   $envoi4 = array (
-    "valeur"=>$_POST['Valeur'],
-    "id_personne"=>$_POST['id_matiere'],
+    "valeur"=>$_POST['eco'],
+    "id_matiere"=>2,
     "id_etudiant"=>$_POST['id_etudiant']
   );
-   $unControleur->insert("note",$envoi,$envoi1,$envoi2,$envoi3,$envoi4);
+   $unControleur->insert("note",$envoi);
+   $unControleur->insert("note",$envoi1);
+   $unControleur->insert("note",$envoi2);
+   $unControleur->insert("note",$envoi3);
+   $unControleur->insert("note",$envoi4);
   
    echo '<div class="modal fade show" style="display : block;" id="ignismyModal" role="dialog">
                 <div class="modal-dialog">

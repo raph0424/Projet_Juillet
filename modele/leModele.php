@@ -162,7 +162,7 @@ public function selectMatiere()
     {
     if ($this->unPdo != null) {
             // selection de toutes les données
-            $requete = "select * from etudiant;";
+            $requete = "select * from etudiant where roles = 'Role_Stud';";
             // preparation de la requete avant execution
             $select = $this->unPdo->prepare($requete);
 

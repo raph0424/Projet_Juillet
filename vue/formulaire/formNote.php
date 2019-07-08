@@ -1,21 +1,9 @@
 <form class="form-group" method="post" action="">
     <table border=0>
-    <div class="form-group">
-    <td><select name="id_matiere">
-            <?php
-                    foreach( $lesCateg as $uneCateg)
-                    {
-                        echo "<option value='".$uneCateg['id_matiere']."'>"
-                        .$uneCateg['libelle']."</option>";
-                    }
-            ?>
-            </select>
-            </td>
-        </div>  
         <div class="form-group">
     <td><select name="id_etudiant">
             <?php
-                    foreach( $lesCateg as $uneCateg)
+                    foreach( $lesCategs as $uneCateg)
                     {
                         echo "<option value='".$uneCateg['id_etudiant']."'>"
                         .$uneCateg['Nom']."</option>";
@@ -51,12 +39,12 @@
             </div>
         </div>   
         <div class="form-group">
-            <label for="ecd" class="col-sm-4 control-label">Note d'eco droit management</label>
+            <label for="eco" class="col-sm-4 control-label">Note d'eco droit management</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="ecd" name="ecd" placeholder="Note">
+                <input type="text" class="form-control" id="eco" name="eco" placeholder="Note">
             </div>
         </div>      
     </table>
-        <input class ='buttonCom btn btn-primary' type="submit" name="envoyer" value="Envoyer">
+        <input class ='buttonCom btn btn-primary' type="submit" name="Ajouter" value="Envoyer">
         <!--<input type="hidden" name="id_ticket" value="<?php/* echo $id_ticket ;*/?>">-->
 </form>
