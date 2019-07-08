@@ -1,33 +1,15 @@
 <?php
 session_start();
 require_once("../controleur/leControleur.php");
-$unControleur = new leControleur("localhost","recap","root","");
-if(isset($_POST["Seconnecter"]))
-{
-    $login = $_POST['login'];
-    $mdp = $_POST['mdp'];  
-    $resultat = $unControleur->verifCon($login, $mdp);    
-        if (isset($resultat['Nom']))
-        {
-            $_SESSION['id_etudiant'] = $resultat['id_etudiant'];
-            $_SESSION['mdp'] = $resultat['mdp'];
-            $_SESSION['email'] = $resultat['Email'];
-            $_SESSION['login'] = $resultat['login'];
-            $_SESSION['nom'] = $resultat['Nom'];
-            $_SESSION['prenom'] = $resultat['Prenom'];
-        }
-        else
-        {
-        
-            echo" Connexion impossible ! Veuillez vérifier vos identifiants !";
-        }
-    }            
+$unControleur = new leControleur("localhost","Recap","root","");
+//$result = $unControleur->selectNote();
+
   ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Orange Event</title>
+  <title>Cfa Insta</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -45,19 +27,28 @@ if(isset($_POST["Seconnecter"]))
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="#intro" class="scrollto"><img src="../img/cfa.png" alt="" title=""></a>
+        <a href="#intro" class="scrollto"><img src="../img/logo.png" alt="" title=""></a>
       </div>
+        
     <?php
+   
     require_once("NavBar.php");
+   
     ?>
     </div>
+    </div>
   </header>
-<div>
+  </br></br>
+ <center>
+
   <?php 
-      require_once("formulaire/formConnexion.php");
+  if (isset($_SESSION['nom']))
+  {
+      require_once("affichage/vueNote.php");
+  }
   ?>
-</div>
-<footer id="footer">
+  </center>
+  <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -112,17 +103,23 @@ if(isset($_POST["Seconnecter"]))
       </div>
     </div>
   </footer>
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/venobox/venobox.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="contactform/contactform.js"></script>
-  <script src="js/main.js"></script>
+<a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/jquery/jquery-migrate.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../lib/easing/easing.min.js"></script>
+<script src="../lib/superfish/hoverIntent.js"></script>
+<script src="../lib/superfish/superfish.min.js"></script>
+<script src="../lib/wow/wow.min.js"></script>
+<script src="../lib/venobox/venobox.min.js"></script>
+<script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="../contactform/contactform.js"></script>
+<script src="../js/main.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+        
+        
+        

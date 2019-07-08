@@ -16,25 +16,12 @@ class leModele {
         }
     }
 
-    public function verifCon($email, $mdp)
+    public function verifCon($login, $mdp)
     {
         if($this->unPdo!=null)
         {
-            $requete ="select * from personne where email=:email and mdp=:mdp;";
-            $donnees = array(":email"=>$email,":mdp"=>$mdp);
-            $select = $this->unPdo->prepare($requete);
-            $select->execute($donnees);
-            $resultat = $select->fetch();
-            return $resultat;
-        }
-    }
-    
-    public function verifConPart($accronyme, $mdp)
-    {
-        if($this->unPdo!=null)
-        {
-            $requete ="select * from partenaire where accronyme=:accronyme and mdp=:mdp;";
-            $donnees = array(":accronyme"=>$accronyme,":mdp"=>$mdp);
+            $requete ="select * from etudiant where login=:login and mdp=:mdp;";
+            $donnees = array(":login"=>$login,":mdp"=>$mdp);
             $select = $this->unPdo->prepare($requete);
             $select->execute($donnees);
             $resultat = $select->fetch();

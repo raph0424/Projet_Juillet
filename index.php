@@ -4,16 +4,12 @@ if(isset($_SESSION['mdp']))
     {
       $connec ='Deconnexion';
       $linkCon ='vue/deconnexion.php';
-      $sign = '';
-      $signe = '';
       $event = 'vue/evenement.php';
     }
     else
     {
       $linkCon ='vue/connexion.php';
       $connec ='Connexion';
-      $sign = 'vue/inscription.php';
-      $signe = 'Inscription';
       $event = 'vue/connexion.php';
     }
 ?>
@@ -21,7 +17,7 @@ if(isset($_SESSION['mdp']))
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Orange Event</title>
+  <title>Cfa Insta</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -39,23 +35,36 @@ if(isset($_SESSION['mdp']))
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="#intro" class="scrollto"><img src="img/cfa.png" alt="" title=""></a>
+        <a href="#intro" class="scrollto"><img src="img/cfa.png" width="80" alt="" title=""></a>
       </div>
       <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="index.php">Accueil</a></li>
-          <li><a href="vue/boutique.php">Boutique</a></li>
-          <li><a href="<?php echo $event; ?>">Classe</a></li>
-          <li><a href="<?php echo $linkCon; ?>"><?php echo $connec; ?></a></li>
-          <li><a href="<?php echo $sign; ?>"><?php echo $signe; ?></a></li>
-          <?php 
-          if(isset($_SESSION['nom']))
-          {
-              ?><li class="buy-tickets"><a href="vue/configuration.php">Configuration</a></li><?php
-          }
-          ?>
-        </ul>
-      </nav>
+    <ul class="nav-menu">
+        <li class="menu-active"><a href="../index.php">Accueil</a></li>
+
+    
+    <?php  if(isset($_SESSION['nom']))
+            {?>
+                <li><a href="info.php">Note</a></li>
+                <?php
+                
+                //if(isset($_SESSION['role'] == "etud"))?>
+                
+                <li><a href="<?php echo $event; ?>">Classe</a></li>
+                <?php
+                
+            }
+            ?>
+            <li><a href="<?php echo $linkCon; ?>"><?php echo $connec; ?></a></li>
+            <?php if (isset($_SESSION['nom']))
+              { ?>
+            <li class="buy-tickets"><a href="billet.php">Billet de retard</a></li>
+        <?php } ?>
+        <?php if (isset($resultat['login'])== "admin")
+              { ?>
+            <li class="buy-tickets"><a href="config.php">Configuration</a></li>
+        <?php } ?>
+    </ul>
+</nav>
     </div>
     </header>
   <section id="intro">
@@ -147,34 +156,35 @@ if(isset($_SESSION['mdp']))
           <div class="col-lg-9">
               <ul id="faq-list">
                 <li>
-                  <a data-toggle="collapse" class="collapsed" href="#faq1">Comment faire pour créer un évenement ? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1">CFA, quésaco ?<i class="fa fa-minus-circle"></i></a>
                   <div id="faq1" class="collapse" data-parent="#faq-list">
                     <p>
-                      Vous devez être partenaire d'orange. Pour devenir partenaire vous devez vous inscrire en tant qu'entreprise et faire une création d'événement.
+                    Les centres de formation d'apprentis (CFA) donnent aux apprentis une formation générale et technique qui complète la formation reçue dans les entreprises.
+Les apprentis ont un statut de jeune travailleur salarié en entreprise, sous la responsabilité d'un maître d'apprentissage. Ils ont conclu un contrat de travail.
                     </p>
                   </div>
                 </li>
                 <li>
-                  <a data-toggle="collapse" href="#faq2" class="collapsed">Quand le site à t-il été crée ? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#faq2" class="collapsed">Qui sommes-nous ?<i class="fa fa-minus-circle"></i></a>
                   <div id="faq2" class="collapse" data-parent="#faq-list">
                     <p>
-                      Le site d'événement d'orange à été crée à la suite d'une forte demande des partenaires pour un système de création d'évenement simplifié.
+                    Le CFA Insta est une école de formation de type CFA proposant des formations adaptées et diplômantes reconnues par l’État (titres RNCP et diplômes d'État), nous avons vu le jour en 2009, nous fêtons donc aujourd'hui nos 10 ans ! 
                     </p>
                   </div>
                 </li>
                 <li>
-                  <a data-toggle="collapse" href="#faq3" class="collapsed">Quels avantages à acheter mes billets? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#faq3" class="collapsed">Que propose le CFA Insta ? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq3" class="collapse" data-parent="#faq-list">
                     <p>
-                      En achetant votre billet en ligne vous pourrez bénéficiez de réduction.
+                    Le CFA Insta vise l'excellence en proposant des formations de qualité de Bac + 2 à Bac + 5 en informatique (aussi bien en réseau qu'en dévelopement) ainsi qu'en comptabilité et en ressources humaines. Les formations sont disponibles aussi bien alternance qu'en initial
                     </p>
                   </div>
                 </li>
                 <li>
-                  <a data-toggle="collapse" href="#faq4" class="collapsed">Combien de produit sont il disponnible ? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#faq4" class="collapsed">Pourquoi choisir le CFA Insta ?<i class="fa fa-minus-circle"></i></a>
                   <div id="faq4" class="collapse" data-parent="#faq-list">
                     <p>
-                     Le nombre de produit varie en fonction des événement en cour, chaque événement détient un produit qu'il met en ligne dans notre boutique.
+                    Le CFA Insta, fort d'un grand succès et d'une expansion constante forme plus de 500 étudiants par an, le taux d'insertion dans les marché de l'emplois étant de 95%, CFA Insta c'est avant tout la garantie de pouvoir mener à biens vos projets professionnels. De plus du personnel de qualité et à l'écoute vous aideront à touver une entreprise pour votre alternance.
                     </p>
                   </div>
                 </li>
