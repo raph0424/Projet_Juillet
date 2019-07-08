@@ -28,11 +28,12 @@ session_start();
       </div>
     <?php
     require_once("NavBar.php");
-    ?>
-        <a href="https://api.whatsapp.com/send?phone=33687907844&text=I'm%20interested%20in%20your%20services" target="_blank">	Click to WhatsApp Chat</a>
-
+    ?> 
     </div>
   </header>
+    <?php
+    require_once("vuewhatsapp.php");
+    ?> 
   
 <footer id="footer">
     <div class="footer-top">
