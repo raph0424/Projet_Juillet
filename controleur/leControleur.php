@@ -26,6 +26,14 @@ class leControleur
     {
         return $this->unModele->insertEmprunter($table, $id, $envoi);
     }
+    public function selectretard()
+    {
+        return $this->unModele->selectretard();
+    }
+    public function selectemprunter()
+    {
+        return $this->unModele->selectemprunter();
+    }
     public function selectNote($id_produit)
     {
         return $this->unModele->selectNote($id_produit);

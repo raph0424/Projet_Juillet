@@ -38,16 +38,16 @@ if(isset($_SESSION['mdp']))
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="index.php" class="scrollto"><img src="img/logo.png" ></a>
+        <a href="index.php" class="scrollto"><img src="img/cfa.png" ></a>
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="../index.php">Accueil</a></li>
+          <li class="menu-active"><a href="">Accueil</a></li>
             <?php   if(isset($_SESSION['nom'])) 
         {?>
             <li><a href="vue/note.php">Note</a></li><?php
         }?>
-<?php   if(isset($_SESSION['login'])  && $_SESSION['login'] != "admin")
+<?php   if(isset($_SESSION['nom']))
         {?>
             <li><a href="<?php echo $event; ?>">Classe</a></li>
         <?php
@@ -63,7 +63,7 @@ if(isset($_SESSION['mdp']))
         }?>
 <?php   if(isset($_SESSION['login']) == "admin")
         {?>
-           <li class="buy-tickets"><a href="vue/whatsapp.php">Whatsapp</a></li><?php
+           <li class="buy-tickets"><a href="whatsapp.php">Whatsapp</a></li><?php
         }?>
     </ul>
 </nav>
