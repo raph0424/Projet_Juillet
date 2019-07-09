@@ -44,12 +44,14 @@ $results = $unControleur->selectEmprunter();
   </header>
   </br></br>
  <center>
+ <div class="col-sm-8">
     <?php 
     if (isset($_SESSION['nom']))
     {
         require_once("affichage/vuebillet.php");
     }
     ?>
+    </div>
   </center>
 
   <footer id="footer">

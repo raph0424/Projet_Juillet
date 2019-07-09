@@ -41,12 +41,14 @@ $result1 = $unControleur->selectEtudiant();
   </header>
   </br></br>
  <center>
+ <div class="col-sm-6">
     <?php 
     if (isset($_SESSION['nom']))
     {
         require_once("affichage/vuerecap.php");
     }
     ?>
+    </div>
   </center>
 
   <footer id="footer">

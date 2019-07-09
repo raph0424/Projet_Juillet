@@ -33,22 +33,21 @@
     <tr>
       <td><?php echo $unResultat['Nom'] ; ?></td>
       <td><?php echo $unResultat['Prenom'] ; ?></td>
-      <td>
           <?php 
-           $tot = "";
+           $tot = 0;
+           $res = "";
           foreach ($result as $resultatt){
               foreach ($results as $resultass){
-                  
               if ($resultatt['id_transport'] == $resultass['id_transport'] && $resultass['id_etudiant'] == $unResultat['id_etudiant'])
               {
-                  $tot = $tot + $resultatt['duree']."mn";
-                  
+                //var_dump($resultatt['duree']);
+                  $tot = $tot + $resultatt['duree'];
+                  $res = $tot."mn";
               }
               }
           }
           $id = $unResultat['id_etudiant'];
-          ?><td width="25%"><a href='recapretard.php?id=<?php echo $id?>&tot=<?php echo $tot?>'><?php echo $tot ;?> </a></td>
-      </td>
+          ?><td width="25%"><a href='recapretard.php?id=<?php echo $id?>&tot=<?php echo $res?>'><?php echo $res ;?> </a></td>
     </tr>
       <?php } }?>
   </tbody>
