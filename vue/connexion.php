@@ -45,7 +45,7 @@ if(isset($_POST["Seconnecter"]))
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="connexion.php" class="scrollto"><img src="../img/cfa.png" alt="" title=""></a>
+        <a href="connexion.php" class="scrollto"><img src="../img/logo.png" alt="" title=""></a>
       </div>
     <?php
     require_once("NavBar.php");
