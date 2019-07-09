@@ -15,9 +15,8 @@ if(isset($_POST["Seconnecter"]))
             $_SESSION['login'] = $resultat['login'];
             $_SESSION['nom'] = $resultat['Nom'];
             $_SESSION['prenom'] = $resultat['Prenom'];
-            header("location: classe.php");
+             header("Location: ../index.php");
         }
-        
         else
         {
             echo" Connexion impossible ! Veuillez vérifier vos identifiants !";
@@ -28,7 +27,7 @@ if(isset($_POST["Seconnecter"]))
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Orange Event</title>
+  <title>Cfa Insta</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -46,7 +45,7 @@ if(isset($_POST["Seconnecter"]))
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="#intro" class="scrollto"><img src="../img/cfa.png" alt="" title=""></a>
+        <a href="connexion.php" class="scrollto"><img src="../img/cfa.png" alt="" title=""></a>
       </div>
     <?php
     require_once("NavBar.php");
@@ -63,7 +62,7 @@ if(isset($_POST["Seconnecter"]))
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="../img/cfa.png" alt="TheEvenet">
+            <img src="img/cfa.png" alt="TheEvenet">
             <p>
             L'informatique concerne le traitement automatique de l'information grâce à l'exécution de programmes par des machines 
             (systèmes embarqués, ordinateurs, applications, etc.). Notre cursus informatique couvre deux pans de l'informatique :
@@ -72,33 +71,31 @@ if(isset($_POST["Seconnecter"]))
 
             </p>
           </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Liens utiles</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-            </ul>
+
+          <div class="col-lg-1 col-md-1 footer-links">
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Liens utiles</h4>
             <ul>
-            <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+            <li><i class="fa fa-angle-right"></i> <a href="index.php">Accueil</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="vue/note.php">Notes</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="vue/deconnexion.php">Déconnexion</a></li>
             </ul>
           </div>
+           <div class="col-lg-1 col-md-1 footer-links">
+          </div>
+
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contactez nous</h4>
             <p>
-            12 Rue de Cléry, 75002 Paris
-              <strong>Téléphone:</strong>01.43.41.72.50<br>
-              <strong>Email:</strong>cfa-insta@gmail.com<br>
+            12 Rue de Cléry, 75002 Paris<br/>
+            01.43.41.72.50<br/>
+            cfa-insta@gmail.com<br/>
             </p>
             <div class="social-links">
-              <a href="https://twitter.com/orange?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/Orange.France/" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/orange/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://twitter.com/CFAINSTA" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/cfainsta" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/school/cfa-insta/" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -106,10 +103,10 @@ if(isset($_POST["Seconnecter"]))
     </div>
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Cfa-Insta</strong>.All Rights Reserved
+        &copy; Copyright <strong>Cfa-Insta</strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by<a href="">Cfa insta</a>
+        Designed by<a href=""> Cfa insta</a>
       </div>
     </div>
   </footer>

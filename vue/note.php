@@ -2,7 +2,10 @@
 session_start();
 require_once("../controleur/leControleur.php");
 $unControleur = new leControleur("localhost","recap","root","");
-?>
+
+//$result = $unControleur->selectNote();
+
+  ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,7 +28,7 @@ $unControleur = new leControleur("localhost","recap","root","");
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="#intro" class="scrollto"><img src="../img/logo.png" alt="" title=""></a>
+        <a href="../index.php" class="scrollto"><img src="../img/logo.png" alt="" title=""></a>
       </div>
         
     <?php
@@ -38,20 +41,24 @@ $unControleur = new leControleur("localhost","recap","root","");
   </header>
   </br></br>
  <center>
-    <?php 
-    if (isset($_SESSION['nom']))
-    {
-        require_once("affichage/vueNote.php");
-    }
-    ?>
+
+  <?php 
+  if (isset($_SESSION['nom']))
+  {
+      require_once("affichage/vueNote.php");
+  }
+  ?>
   </center>
 
-  <footer id="footer">
+
+
+  
+   <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="../img/cfa.png" alt="TheEvenet">
+            <img src="../img/cfa.png" alt="CFAINSTA">
             <p>
             L'informatique concerne le traitement automatique de l'information grâce à l'exécution de programmes par des machines 
             (systèmes embarqués, ordinateurs, applications, etc.). Notre cursus informatique couvre deux pans de l'informatique :
@@ -60,33 +67,31 @@ $unControleur = new leControleur("localhost","recap","root","");
 
             </p>
           </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Liens utiles</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-            </ul>
+
+          <div class="col-lg-1 col-md-1 footer-links">
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Liens utiles</h4>
             <ul>
-            <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+            <li><i class="fa fa-angle-right"></i> <a href="index.php">Accueil</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="vue/note.php">Notes</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="vue/deconnexion.php">Déconnexion</a></li>
             </ul>
           </div>
+           <div class="col-lg-1 col-md-1 footer-links">
+          </div>
+
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contactez nous</h4>
             <p>
-            12 Rue de Cléry, 75002 Paris
-              <strong>Téléphone:</strong>01.43.41.72.50<br>
-              <strong>Email:</strong>cfa-insta@gmail.com<br>
+            12 Rue de Cléry, 75002 Paris<br/>
+            01.43.41.72.50<br/>
+            cfa-insta@gmail.com<br/>
             </p>
             <div class="social-links">
-              <a href="https://twitter.com/orange?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/Orange.France/" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/orange/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://twitter.com/CFAINSTA" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/cfainsta" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/school/cfa-insta/" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -94,10 +99,10 @@ $unControleur = new leControleur("localhost","recap","root","");
     </div>
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Cfa-Insta</strong>.All Rights Reserved
+        &copy; Copyright <strong>Cfa-Insta</strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by<a href="">Cfa insta</a>
+        Designed by<a href=""> Cfa insta</a>
       </div>
     </div>
   </footer>
