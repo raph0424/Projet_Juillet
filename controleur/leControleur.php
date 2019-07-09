@@ -18,6 +18,14 @@ class leControleur
     {
         return $this->unModele->selectMatiere();
     }
+    public function selectMoyTransport()
+    {
+        return $this->unModele->selectMoyTransport();
+    }
+    public function insertEmprunter($table, $id, $envoi)
+    {
+        return $this->unModele->insertEmprunter($table, $id, $envoi);
+    }
     public function selectNote($id_produit)
     {
         return $this->unModele->selectNote($id_produit);

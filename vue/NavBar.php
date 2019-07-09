@@ -32,6 +32,10 @@ if (isset($_SESSION['mdp'])) {
         {?>
            <li class="buy-tickets"><a href="whatsapp.php">Whatsapp</a></li><?php
         }?>
+<?php   if(isset($_SESSION['login']) == "admin")
+        {?>
+           <li class="buy-tickets"><a href="emprunter.php">Itinéraires</a></li><?php
+        }?>
     </ul>
 </nav>
 

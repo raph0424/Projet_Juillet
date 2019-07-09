@@ -204,6 +204,39 @@ public function selectMatiere()
             
         }
     }
+    public function selectMoyTransport()
+    {
+    if ($this->unPdo != null) {
+            // selection de toutes les données
+            $requete = "select * from moy_de_transport ;";
+            // preparation de la requete avant execution
+            $select = $this->unPdo->prepare($requete);
+
+            // exection de la requete
+            $select->execute();
+
+            // extraction des données
+            $result = $select->fetchAll();
+            return $result;
+            
+        }
+    }
+    
+    public function insertEmprunter($table, $id, $envoi)
+    {
+    if ($this->unPdo == null)
+     {
+        return;
+     }
+     foreach($envoi as $value){
+         
+     
+     $requete = "insert into ".$table." values (:id_etudiant, :idtransport)";
+     $tab = array(":id_etudiant"=>$id,":idtransport"=>$value);
+     $statement = $this->unPdo->prepare($requete);
+           $statement->execute($tab);
+     }
+    }
     public function selectMoyenne()
     {
     if ($this->unPdo != null) {
