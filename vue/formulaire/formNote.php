@@ -1,7 +1,7 @@
 <form class="form-group" method="post" action="">
     <table border=0>
         <div class="form-group">
-    <td><select name="id_etudiant">
+    <td><br/><select class="browser-default custom-select "  name="id_etudiant">
             <?php
                     foreach( $lesCategs as $uneCateg)
                     {
@@ -45,6 +45,6 @@
             </div>
         </div>      
     </table>
-        <input class ='buttonCom btn btn-primary' type="submit" name="Ajouter" value="Envoyer">
+        <br/><input class ='buttonCom btn btn-primary' type="submit" name="Ajouter" value="Envoyer">
         <!--<input type="hidden" name="id_ticket" value="<?php/* echo $id_ticket ;*/?>">-->
 </form>
