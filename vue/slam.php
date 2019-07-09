@@ -42,9 +42,11 @@ $result = $unControleur->selectSlam();
 <br><br><br><br><br><br><br><br>
 
 <center>
+<div class="col-sm-6">
 <?php 
     require_once("affichage/vueSlam.php");
 ?>
+</div>
 </center>
 <br><br><br><br><br><br><br><br>
 
