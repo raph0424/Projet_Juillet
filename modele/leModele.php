@@ -264,7 +264,7 @@ public function selectMatiere()
     if ($this->unPdo != null) {
             // selection de toutes les données
             $requete = "
-            select e.Nom, e.Prenom, e.Date_naiss, c.Libelle, c.Salle, c.Diplome 
+            select e.id_etudiant, e.Nom, e.Prenom, e.Date_naiss, c.Libelle, c.Salle, c.Diplome 
             from etudiant e, classe c 
             where e.id_classe = c.id_classe and e.id_classe = 1;";
             // preparation de la requete avant execution
