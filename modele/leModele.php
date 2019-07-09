@@ -62,6 +62,17 @@ public function insert($table, array $tab)
            //var_dump( $valeurs);
 }
 
+public function insertRetard($tab)
+{
+    if ($this->unPdo == null)
+     {
+        return;
+     }
+     $requete = "insert into retard values (null, :date, :retard, :description)";
+     $statement = $this->unPdo->prepare($requete);
+            $statement->execute($tab);
+     
+}
 /*
     Delete
 */

@@ -1,6 +1,6 @@
 <?php
-require_once ("controleur/controleur.class.php");
-$unControleur = new Controleur ("localhost", "bdd", "root", "");
+      require_once("../Controleur/leControleur.php");
+$unControleur = new leControleur ("localhost", "recap", "root", "");
 
 
 
@@ -10,11 +10,12 @@ $rss = simplexml_load_file($url);
 echo '<ul>';
 foreach ($rss->channel->item as $item){
  $datetime = date_create($item->pubDate);
- $date = date_format($datetime, 'd M Y, H\hi');
+ $date = date_format($datetime, 'Y-m-d');
  echo '<li><a href="'.$item->link.'">'.utf8_decode($item->title).'</a> ('.$date.')</li>';
 echo "</br>le retard est de : ".  $item->retard ;
  //insertion dans la table retard
- $unControleur ->insertRetard ($item->pubDate, $item->description, $item->link , $item->retard );
+    $tab = array(':date'=>$item->Date,':description'=>$item->description,':retard'=>$item->retard);
+ $unControleur ->insertRetard($tab);
 }
 echo '</ul>';
 ?>
