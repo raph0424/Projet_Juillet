@@ -237,6 +237,39 @@ public function selectMatiere()
            $statement->execute($tab);
      }
     }
+    public function selectretard()
+    {
+    if ($this->unPdo != null) {
+            // selection de toutes les données
+            $requete = "select * from retard;";
+            // preparation de la requete avant execution
+            $select = $this->unPdo->prepare($requete);
+
+            // exection de la requete
+            $select->execute();
+
+            // extraction des données
+            $result = $select->fetchAll();
+            return $result;
+        }
+    }
+    public function selectemprunter()
+    {
+    if ($this->unPdo != null) {
+            // selection de toutes les données
+            $requete = "select * from emprunter;";
+            // preparation de la requete avant execution
+            $select = $this->unPdo->prepare($requete);
+
+            // exection de la requete
+            $select->execute();
+
+            // extraction des données
+            $result = $select->fetchAll();
+            return $result;
+        }
+    }
+    
     public function selectMoyenne()
     {
     if ($this->unPdo != null) {
