@@ -29,7 +29,7 @@ $unControleur = new leControleur("localhost","recap","root","");
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="../index.php" class="scrollto"><img src="../img/logo.png" alt="" title=""></a>
+        <a href="../index.php" class="scrollto"><img src="../img/cfa.png" alt="" title=""></a>
       </div>
 
     <?php
@@ -56,7 +56,7 @@ $unControleur = new leControleur("localhost","recap","root","");
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="../img/logo.png" alt="TheEvenet">
+            <img src="../img/cfa.png" alt="TheEvenet">
             <p>
             L'informatique concerne le traitement automatique de l'information grâce à l'exécution de programmes par des machines 
             (systèmes embarqués, ordinateurs, applications, etc.). Notre cursus informatique couvre deux pans de l'informatique :

@@ -28,7 +28,7 @@ $unControleur = new leControleur("localhost","recap","root","");
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="../index.php" class="scrollto"><img src="../img/logo.png" alt="" title=""></a>
+        <a href="../index.php" class="scrollto"><img src="../img/cfa.png" alt="" title=""></a>
       </div>
         
     <?php

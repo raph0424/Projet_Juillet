@@ -31,7 +31,7 @@ $results = $unControleur->selectEmprunter();
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="#intro" class="scrollto"><img src="../img/logo.png" alt="" title=""></a>
+        <a href="#intro" class="scrollto"><img src="../img/cfa.png" alt="" title=""></a>
       </div>
         
     <?php
@@ -44,14 +44,13 @@ $results = $unControleur->selectEmprunter();
   </header>
   </br></br>
  <center>
- <div class="col-sm-8">
     <?php 
     if (isset($_SESSION['nom']))
     {
         require_once("affichage/vuebillet.php");
     }
     ?>
-    </div>
+    <br><br><br>
   </center>
 
   <footer id="footer">
@@ -68,33 +67,31 @@ $results = $unControleur->selectEmprunter();
 
             </p>
           </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Liens utiles</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-            </ul>
+
+          <div class="col-lg-1 col-md-1 footer-links">
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Liens utiles</h4>
             <ul>
-            <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+            <li><i class="fa fa-angle-right"></i> <a href="index.php">Accueil</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="vue/note.php">Notes</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="vue/deconnexion.php">Déconnexion</a></li>
             </ul>
           </div>
+           <div class="col-lg-1 col-md-1 footer-links">
+          </div>
+
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contactez nous</h4>
             <p>
-            12 Rue de Cléry, 75002 Paris
-              <strong>Téléphone:</strong>01.43.41.72.50<br>
-              <strong>Email:</strong>cfa-insta@gmail.com<br>
+            12 Rue de Cléry, 75002 Paris<br/>
+            01.43.41.72.50<br/>
+            cfa-insta@gmail.com<br/>
             </p>
             <div class="social-links">
-              <a href="https://twitter.com/orange?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/Orange.France/" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/orange/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://twitter.com/CFAINSTA" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/cfainsta" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/school/cfa-insta/" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -102,10 +99,10 @@ $results = $unControleur->selectEmprunter();
     </div>
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Cfa-Insta</strong>.All Rights Reserved
+        &copy; Copyright <strong>Cfa-Insta</strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by<a href="">Cfa insta</a>
+        Designed by<a href=""> Cfa insta</a>
       </div>
     </div>
   </footer>
