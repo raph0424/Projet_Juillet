@@ -3,10 +3,7 @@ session_start();
 require_once("../controleur/leControleur.php");
 $unControleur = new leControleur("localhost","recap","root","");
 
-$result2 = $unControleur->selectClasse();
 $result1 = $unControleur->selectEtudiant();
-$result = $unControleur->selectRetard();
-$results = $unControleur->selectEmprunter();
 
 ?>
 <!DOCTYPE html>
@@ -47,7 +44,7 @@ $results = $unControleur->selectEmprunter();
     <?php 
     if (isset($_SESSION['nom']))
     {
-        require_once("affichage/vuebillet.php");
+        require_once("affichage/vuerecap.php");
     }
     ?>
   </center>
