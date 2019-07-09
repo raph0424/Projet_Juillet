@@ -3,14 +3,16 @@
   <channel>
     <item>
       <title>RER C : Retard</title>
+      <idtrans> 3 </idtrans>
       <description>Retard de 12 minutes</description>
       <retard> 15 </retard>
-      <Date> 2019-07-08 </Date>
+      <Date> 2019/07/08 </Date>
       <jour> lundi </jour>
       <heure> 08:23:00 </heure>
     </item>
     <item>
       <title>Ligne 4 : Retard</title>
+      <idtrans> 6 </idtrans>
       <description>Retard de 15 minutes</description>
       <retard> 20 </retard>
       <Date> 2019/07/08 </Date>
@@ -19,6 +21,7 @@
     </item>
     <item>
       <title>Ligne 3 : Retard</title>
+      <idtrans> 4 </idtrans>
       <description>Retard de 8 minutes</description>
       <retard> 8 </retard>
       <Date> 2019/07/09 </Date>
@@ -27,6 +30,7 @@
     </item>
     <item>
       <title>Ligne 1 : Retard</title>
+      <idtrans> 5 </idtrans>
       <description>Retard de 5 minutes</description>
       <retard> 5 </retard>
       <Date> 2019/07/09 </Date>
@@ -35,6 +39,7 @@
     </item>
     <item>
       <title>RER A : Retard</title>
+      <idtrans> 1 </idtrans>
       <description>Retard de 18 minutes</description>
       <retard> 18 </retard>
       <Date> 2019/07/08 </Date>
@@ -43,6 +48,7 @@
     </item>
     <item>
       <title>RER B : Retard</title>
+      <idtrans> 2 </idtrans>
       <description>Retard de 11 minutes</description>
       <retard> 11 </retard>
       <Date> 2019/07/08 </Date>
@@ -51,6 +57,7 @@
     </item>
     <item>
       <title>BUS 26 : Retard</title>
+      <idtrans> 7 </idtrans>
       <description>Retard de 9 minutes</description>
       <retard> 9 </retard>
       <Date> 2019/07/09 </Date>
@@ -58,7 +65,8 @@
       <heure> 08:06:00 </heure>
     </item>
     <item>
-      <title>RER 46 : Retard</title>
+      <title>BUS 46 : Retard</title>
+      <idtrans> 8 </idtrans>
       <description>Retard de 13 minutes</description>
       <retard> 13 </retard>
       <Date> 2019/07/08 </Date>
@@ -67,6 +75,7 @@
     </item>
     <item>
       <title>BUS 227 : Retard</title>
+      <idtrans> 9 </idtrans>
       <description>Retard de 2 minutes</description>
       <retard> 2 </retard>
       <Date> 2019/07/09 </Date>
