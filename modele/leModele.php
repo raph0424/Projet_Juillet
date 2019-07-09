@@ -68,7 +68,7 @@ public function insertRetard($tab)
      {
         return;
      }
-     $requete = "insert into retard values (null, :date, :retard, :description)";
+     $requete = "insert into retard values (null, :date, :retard, :description, :idtrans)";
      $statement = $this->unPdo->prepare($requete);
             $statement->execute($tab);
      
