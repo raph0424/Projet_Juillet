@@ -41,9 +41,11 @@ $result = $unControleur->selectSisr();
 <br><br><br><br><br><br><br><br>
 
 <center>
+<div class="col-sm-6">
 <?php 
     require_once("affichage/vueSisr.php");
 ?>
+</div>
 </center>
 <br><br><br><br><br><br><br><br>
 

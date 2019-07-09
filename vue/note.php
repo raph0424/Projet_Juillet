@@ -1,7 +1,8 @@
 <?php
 session_start();
 require_once("../controleur/leControleur.php");
-$unControleur = new leControleur("localhost","Recap","root","");
+$unControleur = new leControleur("localhost","recap","root","");
+
 //$result = $unControleur->selectNote();
 
   ?>
