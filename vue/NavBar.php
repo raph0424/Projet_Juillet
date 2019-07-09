@@ -26,7 +26,13 @@ if (isset($_SESSION['mdp'])) {
 <?php   if(isset($_SESSION['login']) && $_SESSION['login'] == "admin")
         {?>
             <li class="buy-tickets"><a href="billet.php">Billet de retard</a></li><?php
-        }?>
+        }
+        if(isset($_SESSION['login']) && $_SESSION['login'] != "admin")
+        {?>
+            <li class="buy-tickets"><a href="emprunter.php">Itinéraire</a></li>
+        <?php
+        }
+        ?>
 <?php   if(isset($_SESSION['nom']))
         {?>
            <li class="buy-tickets"><a href="whatsapp.php">Whatsapp</a></li><?php

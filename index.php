@@ -65,9 +65,11 @@ if(isset($_SESSION['mdp']))
 </nav>
     </div>
     </header>
-  <section id="intro">
+    <section id="intro">
     <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0"><span>CFA INSTA</span></h1>
+      <h1 class="mb-4 pb-0"><span>Cfa Insta</span></h1>
+      <a href="https://www.youtube.com/watch?v=5I7Og59740E&feature=youtu.be" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
     </div>
   </section>
   <main id="main">
