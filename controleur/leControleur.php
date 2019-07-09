@@ -22,6 +22,10 @@ class leControleur
     {
         return $this->unModele->selectNote($id_produit);
     }
+     public function insertRetard($tab)
+    {
+        return $this->unModele->insertRetard($tab);
+    }
      public function selectEtudiant()
     {
         return $this->unModele->selectEtudiant();
