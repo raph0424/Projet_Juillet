@@ -20,19 +20,19 @@ html{
     border-radius: 50%;
   }
   .fa.fa-facebook:hover {
-  background-color:  rgb(57,84,152);
+  background-color:  #457fb5;
   color: white;
   }
   .fa.fa-twitter:hover {
-  background-color:  rgb(97,163,235);
+  background-color: #457fb5;
   color: white;
   }
   .fa.fa-instagram:hover {
-  background-color: rgb(247,74,83);
+  background-color: #457fb5;
   color: white;
   }
 
   .fa.fa-snapchat:hover {
-  background-color:  rgb(247,244,1);
+  background-color:  #457fb5;
   color: white;
   }
