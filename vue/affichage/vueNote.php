@@ -5,7 +5,6 @@
 <?php
 $lesCateg = $unControleur->selectMatiere();
 $lesCategs = $unControleur->selectEtudiant();
-//var_dump($lesCategs);
 require_once("formulaire/formNote.php");
 
 
@@ -13,27 +12,30 @@ require_once("formulaire/formNote.php");
 if(isset($_POST["Ajouter"]))
 {
    $envoi = array (
-   "valeur"=>$_POST['info'],
+   "Valeur"=>$_POST['info'],
    "id_matiere"=>1,
    "id_etudiant"=>$_POST['id_etudiant']
 );
    $envoi1 = array (
-    "valeur"=>$_POST['math'],
+    "Valeur"=>$_POST['math'],
     "id_matiere"=>4,
     "id_etudiant"=>$_POST['id_etudiant']
+
   );
+  var_dump($envoi1);
+
   $envoi2 = array (
-    "valeur"=>$_POST['fr'],
+    "Valeur"=>$_POST['fr'],
     "id_matiere"=>3,
     "id_etudiant"=>$_POST['id_etudiant']
   );
   $envoi3 = array (
-    "valeur"=>$_POST['eng'],
+    "Valeur"=>$_POST['eng'],
     "id_matiere"=>5,
     "id_etudiant"=>$_POST['id_etudiant']
   );
   $envoi4 = array (
-    "valeur"=>$_POST['eco'],
+    "Valeur"=>$_POST['eco'],
     "id_matiere"=>2,
     "id_etudiant"=>$_POST['id_etudiant']
   );
