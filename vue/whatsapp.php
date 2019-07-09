@@ -34,10 +34,11 @@ $result2 = $unControleur->selectClasse();
     ?> 
     </div>
   </header>
+    <div>
     <?php
-    require_once("vuewhatsapp.php");
+    require_once("affichage/vuewhatsapp.php");
     ?> 
-  
+  </div>
 <footer id="footer">
     <div class="footer-top">
       <div class="container">

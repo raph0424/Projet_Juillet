@@ -15,7 +15,9 @@ if(isset($_POST["Seconnecter"]))
             $_SESSION['login'] = $resultat['login'];
             $_SESSION['nom'] = $resultat['Nom'];
             $_SESSION['prenom'] = $resultat['Prenom'];
+            header("location: classe.php");
         }
+        
         else
         {
             echo" Connexion impossible ! Veuillez vérifier vos identifiants !";

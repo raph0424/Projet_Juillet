@@ -26,6 +26,14 @@ class leControleur
     {
         return $this->unModele->selectEtudiant();
     }
+    public function selectEtudiantt()
+    {
+        return $this->unModele->selectEtudiantt();
+    }
+    public function selectClasse()
+    {
+        return $this->unModele->selectClasse();
+    }
     public function selectSlam()
     {
         return $this->unModele->selectSlam();
@@ -58,11 +66,7 @@ class leControleur
     {
         return $this->unModele->selectPartenaire();
     }
-    public function verifConPart($accronyme, $mdp)
-    {
-        // on peu controler les donnees 
-        return $this->unModele->verifConPart($accronyme, $mdp);
-    }
+
     public function insert($table, $tab)
       {
         $this->unModele->insert($table, $tab);
@@ -94,5 +98,13 @@ class leControleur
        public function selectAttribut2()
       {
           return $this->unModele->selectAttribut2();
+      }
+      public function selectMoyenne()
+      {
+          return $this->unModele->selectMoyenne();
+      }
+      public function calculeMoyenne()
+      {
+          return $this->unModele->calculeMoyenne();
       }
 }

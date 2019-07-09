@@ -2,10 +2,7 @@
 session_start();
 require_once("../controleur/leControleur.php");
 $unControleur = new leControleur("localhost","recap","root","");
-
-//$result = $unControleur->selectNote();
-
-  ?>
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,14 +38,14 @@ $unControleur = new leControleur("localhost","recap","root","");
   </header>
   </br></br>
  <center>
-
-  <?php 
-  if (isset($_SESSION['nom']))
-  {
-      require_once("affichage/vueNote.php");
-  }
-  ?>
+    <?php 
+    if (isset($_SESSION['nom']))
+    {
+        require_once("affichage/vueNote.php");
+    }
+    ?>
   </center>
+
   <footer id="footer">
     <div class="footer-top">
       <div class="container">

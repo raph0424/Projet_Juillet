@@ -4,8 +4,8 @@
         <center>
             <form class="form-group" action="" method="post">
                 <table>
-                    <tr><td>Login</td><td><input  class="form-control" type="text" name="login"></td></tr>
-                    <tr><td>Mdp </td><td><input  class="form-control" type="password" name="mdp"></td></tr>
+                    <tr><td>Identifiant</td><td><input  class="form-control" type="text" name="login"></td></tr>
+                    <tr><td>Mot de passe </td><td><input  class="form-control" type="password" name="mdp"></td></tr>
                     <tr>
                         <td><input class ='btn btn-primary' type="submit" name="Seconnecter" value="Se connecter"></td>
                         <td><input class ='btn btn-primary' type="reset" name="Annuler" value="Annuler"></td>

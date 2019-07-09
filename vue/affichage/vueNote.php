@@ -5,10 +5,10 @@
 <?php
 $lesCateg = $unControleur->selectMatiere();
 $lesCategs = $unControleur->selectEtudiant();
+
+if(isset($_SESSION['login']) && $_SESSION['login'] == "admin")
+{
 require_once("formulaire/formNote.php");
-
-
-
 if(isset($_POST["Ajouter"]))
 {
    $envoi = array (
@@ -22,8 +22,6 @@ if(isset($_POST["Ajouter"]))
     "id_etudiant"=>$_POST['id_etudiant']
 
   );
-  var_dump($envoi1);
-
   $envoi2 = array (
     "Valeur"=>$_POST['fr'],
     "id_matiere"=>3,
@@ -60,8 +58,21 @@ if(isset($_POST["Ajouter"]))
                         </div>
                     </div>
                 </div>
-            </div>
- ';}?>
+            </div>';}
+}?>
+<center>
+<div class="col-sm-6">
+<?php
+ if(isset($_SESSION['login'])  && $_SESSION['login'] != "admin")
+ {
+$result = $unControleur->selectMoyenne();
+$result_moy = $unControleur->calculeMoyenne();
+$resultat = $unControleur->selectEtudiantt();
+require_once("vueMoyenne.php");
+ }
+?>
+</div>
+</center>
 <script>
     function closeModal()
     {
