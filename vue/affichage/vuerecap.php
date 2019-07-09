@@ -18,12 +18,12 @@
     echo "</table></table>"; 
     echo"<table class=' table table-bordered'>
     <tr><th>Réalisé par </th><td>Okacha Ben Ahmed</td></tr></table>";
-       
+      ?> <a href="pdf.php?id=<?php echo $unResultat['Nom']?>&tot=<?php echo $_GET['tot']?>" class="button">convertir en pdf</a><?php
+
                             }
                             }
                             
 ?>
-<a href="pdf.php?id=<?php echo $unResultat['Nom']?>&tot=<?php echo $_GET['tot']?>" class="button">convertir en pdf</a>
 
 <style>
 
