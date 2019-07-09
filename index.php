@@ -63,7 +63,7 @@ if(isset($_SESSION['mdp']))
         }?>
 <?php   if(isset($_SESSION['login']) == "admin")
         {?>
-           <li class="buy-tickets"><a href="whatsapp.php">Whatsapp</a></li><?php
+           <li class="buy-tickets"><a href="vue/whatsapp.php">Whatsapp</a></li><?php
         }?>
     </ul>
 </nav>
