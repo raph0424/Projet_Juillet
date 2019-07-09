@@ -26,6 +26,10 @@ class leControleur
     {
         return $this->unModele->selectEtudiant();
     }
+    public function selectClasse()
+    {
+        return $this->unModele->selectClasse();
+    }
     public function selectSlam()
     {
         return $this->unModele->selectSlam();
