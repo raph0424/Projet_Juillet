@@ -38,7 +38,7 @@ if(isset($_SESSION['mdp']))
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="index.php" class="scrollto"><img src="img/cfa.png" ></a>
+        <a href="index.php" class="scrollto"><img src="img/logo.png" ></a>
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
