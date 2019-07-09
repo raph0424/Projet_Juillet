@@ -18,6 +18,7 @@ if(isset($_SESSION['mdp']))
 <head>
   <meta charset="utf-8">
   <title>Cfa Insta</title>
+  <link rel="icon" href="img/favicon.png"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -31,18 +32,20 @@ if(isset($_SESSION['mdp']))
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
+
+
 <body>
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="#intro" class="scrollto"><img src="img/cfa.png" width="80" alt="" title=""></a>
+        <a href="index.php" class="scrollto"><img src="img/cfa.png" ></a>
       </div>
       <nav id="nav-menu-container">
-    <ul class="nav-menu">
-        <li class="menu-active"><a href="../index.php">Accueil</a></li>
-<?php   if(isset($_SESSION['nom'])) 
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="../index.php">Accueil</a></li>
+            <?php   if(isset($_SESSION['nom'])) 
         {?>
-            <li><a href="note.php">Note</a></li><?php
+            <li><a href="vue/note.php">Note</a></li><?php
         }?>
 <?php   if(isset($_SESSION['login'])  && $_SESSION['login'] != "admin")
         {?>
@@ -57,6 +60,10 @@ if(isset($_SESSION['mdp']))
 <?php   if(isset($_SESSION['login']) && $_SESSION['login'] == "admin")
         {?>
            <li class="buy-tickets"><a href="config.php">Configuration</a></li><?php
+        }?>
+<?php   if(isset($_SESSION['login']) == "admin")
+        {?>
+           <li class="buy-tickets"><a href="whatsapp.php">Whatsapp</a></li><?php
         }?>
     </ul>
 </nav>
@@ -73,7 +80,7 @@ if(isset($_SESSION['mdp']))
       <div class="container-fluid">
         <div class="section-header">
           <h2>Cfa Insta</h2>
-          <p>Location du siege social</p>
+          <p><small style="font-style: italic;">Où sommes nous ?</small></p>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6 venue-map">
@@ -82,7 +89,7 @@ if(isset($_SESSION['mdp']))
           <div class="col-lg-6 venue-info">
             <div class="row justify-content-center">
               <div class="col-11 col-lg-8">
-                <h3>Siege social, Paris</h3>
+                <h3>L'école </h3>
                 <p>Créé en 2009 par Ryad Lebib et Hubert Trapet, le CFA INSTA accueille et forme près de 500 étudiant(e)s par an pour leur assurer un avenir professionnel.
                   Notre réactivité et notre écoute du marché s'est traduite par la mise en place de formations adaptées et diplômantes reconnues par l’État (titres RNCP et diplômes d'État), en informatique (développement, logiciel et réseaux), en ressources humaines et en comptabilité.
                   Depuis près de 10 ans, le CFA INSTA propose plusieurs formations en alternance (contrat d’apprentissage ou de professionnalisation) en comptabilité et RH et en initiale et en alternance en informatique. Nos formations vont de bac+ 2 à bac+5.</p>
@@ -197,22 +204,22 @@ Les apprentis ont un statut de jeune travailleur salarié en entreprise, sous la
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
-              <h3>Addresse</h3>
-              <address>6 Place d'Alleray,  Paris 75015, FRANCE</address>
+              <h3>Adresse</h3>
+              <address>12 Rue de Cléry, 75002 Paris</address>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Numéro de téléphone</h3>
-              <p><a href="tel:+33647389923">06.47.38.99.23</a></p>
+              <p><a href="tel:+33647389923">01.43.41.72.50</a></p>
             </div>
               </div>
           <div class="col-md-4">
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:orange.event2019@gmail.com"> orange.event2019@gmail.com</a></p>
+              <p><a href="mailto:cfa-insta@gmail.com">cfa-insta@gmail.com</a></p>
             </div>
           </div>
         </div>
@@ -232,33 +239,31 @@ Les apprentis ont un statut de jeune travailleur salarié en entreprise, sous la
 
             </p>
           </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Liens utiles</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-            </ul>
+
+          <div class="col-lg-1 col-md-1 footer-links">
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Liens utiles</h4>
             <ul>
-            <li><i class="fa fa-angle-right"></i> <a href="#">Accueil</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">A propos</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+            <li><i class="fa fa-angle-right"></i> <a href="index.php">Accueil</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="vue/note.php">Notes</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="vue/deconnexion.php">Déconnexion</a></li>
             </ul>
           </div>
+           <div class="col-lg-1 col-md-1 footer-links">
+          </div>
+
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contactez nous</h4>
             <p>
-            12 Rue de Cléry, 75002 Paris
-              <strong>Téléphone:</strong>01.43.41.72.50<br>
-              <strong>Email:</strong>cfa-insta@gmail.com<br>
+            12 Rue de Cléry, 75002 Paris<br/>
+            01.43.41.72.50<br/>
+            cfa-insta@gmail.com<br/>
             </p>
             <div class="social-links">
-              <a href="https://twitter.com/orange?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/Orange.France/" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/orange/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://twitter.com/CFAINSTA" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/cfainsta" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/school/cfa-insta/" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -266,10 +271,10 @@ Les apprentis ont un statut de jeune travailleur salarié en entreprise, sous la
     </div>
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Cfa-Insta</strong>.All Rights Reserved
+        &copy; Copyright <strong>Cfa-Insta</strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by<a href="">Cfa insta</a>
+        Designed by<a href=""> Cfa insta</a>
       </div>
     </div>
   </footer>

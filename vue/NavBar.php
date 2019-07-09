@@ -17,10 +17,7 @@ if (isset($_SESSION['mdp'])) {
         {?>
             <li><a href="note.php">Note</a></li><?php
         }?>
-<?php   if(isset($_SESSION['login'])  && $_SESSION['login'] != "admin")
-        {?>
             <li><a href="<?php echo $event; ?>">Classe</a></li>
-        <?php
         }?>
         <li><a href="<?php echo $linkCon; ?>"><?php echo $connec; ?></a></li>
 <?php   if(isset($_SESSION['nom']))
