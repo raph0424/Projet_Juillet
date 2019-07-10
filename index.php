@@ -60,7 +60,13 @@ if(isset($_SESSION['mdp']))
 <?php   if(isset($_SESSION['nom']))
         {?>
            <li class="buy-tickets"><a href="vue/whatsapp.php">Whatsapp</a></li><?php
-        }?>
+        }
+         if(isset($_SESSION['login']) && $_SESSION['login'] == "admin")
+        {?>
+            <li class="buy-tickets"><a href="vue/emprunter.php">Itinéraire</a></li>
+        <?php
+        }
+        ?>
     </ul>
 </nav>
     </div>
